@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PincelitosProximamente", "PincelitosProximamente\PincelitosProximamente.csproj", "{15C82CAC-FE4C-42D4-966B-6479F85131A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinturasPincelitos", "PinturasPincelitos\PinturasPincelitos.csproj", "{3B4A7904-F0EE-48A3-B727-25A1A112CC13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15C82CAC-FE4C-42D4-966B-6479F85131A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15C82CAC-FE4C-42D4-966B-6479F85131A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15C82CAC-FE4C-42D4-966B-6479F85131A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15C82CAC-FE4C-42D4-966B-6479F85131A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4A7904-F0EE-48A3-B727-25A1A112CC13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4A7904-F0EE-48A3-B727-25A1A112CC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4A7904-F0EE-48A3-B727-25A1A112CC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4A7904-F0EE-48A3-B727-25A1A112CC13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {07DBC91B-7821-4A9D-87E5-DA1DD986CE45}
+	EndGlobalSection
+EndGlobal

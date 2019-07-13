@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Contacto";
+    Layout = "~/Views/Master/Publico.cshtml";
+}
+
+<img src="~/img/Contactanos.png" style="width:500px; height:200px;" />
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success col-md-12" style="text-align:center;" role="alert">
+        <strong>¡BIEN!</strong> Su mensaje ha sido enviado con éxito. <strong>Pronto nos contactaremos con usted.</strong>
+    </div>
+}
+@if (ViewBag.error != null)
+{
+    <div class="alert alert-danger col-md-12" style="text-align:center;" role="alert">
+        <strong>¡OOPS!</strong> Al parecer hubo un error intentalo de nuevo más tarde.
+    </div>
+}
+<!-- ================ contact section start ================= -->
+<section class="contact-section section_padding">
+    <div class="container">
+        <div class="d-none d-sm-block mb-5 pb-4">
+            <div class="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.5135511678819!2d-89.59066137082894!3d20.950338251572987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5671008183f537%3A0x43be28c30712be10!2zQ2FsbGUgMjPhtKwgMzMyLCBTYW4gSm9zw6kgVmVyZ2VsLCA5NzE3MyBNw6lyaWRhLCBZdWMu!5e0!3m2!1ses-419!2smx!4v1550888682740" width="1080" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        @using (Ajax.BeginForm("EnviarMensaje", "Pintura", new AjaxOptions { HttpMethod = "POST" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="contact-title">Contactanos...</h2>
+                </div>
+
+                <div class="col-lg-7">
+                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+
+                                    <textarea required class="form-control w-100" name="mensaje" id="mensaje" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe el mensaje'" placeholder='Escribe el mensaje'></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input class="form-control" required name="nombre" id="nombre" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre'" placeholder='Nombre'>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input class="form-control" required name="asunto" id="asunto" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Asuntos'" placeholder='Asunto'>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <input class="form-control" required name="telefono" id="telefono" type="tel" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Teléfono'" placeholder='Teléfono'>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" required name="correo" id="correo" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Correo Electronico'" placeholder='Correo Electrónico'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="submit" class="btn_1" value="Enviar Mensaje">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-home"></i></span>
+                        <div class="media-body">
+                            <h3>San José Vergel, Mérida Yucatán</h3>
+                            <p>C. 23a #332 x 18 y 20 CP. 97173</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                        <div class="media-body">
+                            <h3>+52 1 99 93 81 35 00</h3>
+                            <p>Lun-Vie de 3:00 pm a 8 pm</p>
+                            <p>Sabado de 10:30 am a 6 pm</p>
+                        </div>
+                    </div>
+                    <div class="media contact-info">
+                        <span class="contact-info__icon"><i class="ti-email"></i></span>
+                        <div class="media-body">
+                            <h3>productospincelitos@hotmail.com</h3>
+                            <p>Envianos tus dudas, nosotros te contactamos</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</section>
+<!-- ================ contact section end ================= -->
